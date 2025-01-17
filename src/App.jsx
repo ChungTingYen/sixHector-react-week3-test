@@ -687,7 +687,7 @@ function App() {
                 <div className="col-md-6 mb-1">
                   <h2>單一產品細節</h2>
                   {tempProduct ? (
-                    <ProductDetail productData={tempProduct}
+                    <ProductDetail productData={{ ...tempProduct }}
                       // title={tempProduct.title}
                       // imageUrl={tempProduct.imageUrl}
                       // setImgAlt={tempProduct.setImgAlt}
