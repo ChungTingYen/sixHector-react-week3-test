@@ -3,15 +3,18 @@ import React, { useRef, useState, memo } from "react";
 import Modal1 from "./ProductDetailModal";
 const ProductDetail = (props) => {
   const {
-    title,
-    imageUrl,
-    description,
-    content,
-    origin_price,
-    price,
-    imagesUrl,
-    category,
+    productData: {
+      title,
+      imageUrl,
+      description,
+      content,
+      origin_price,
+      price,
+      imagesUrl,
+      category,
+    }
   } = props;
+
   const handleImageClick = (imageSrc) => {
     imgSrcRef.current.src = imageSrc;
     modalRef.current.setModalImage(imageSrc);

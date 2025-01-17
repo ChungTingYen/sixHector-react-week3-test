@@ -676,13 +676,7 @@ function App() {
                               key={product.id}
                               {...product}
                               isSelected={product.id === selectedRowIndex}
-                              // index={index}
-                              // onGetProduct={onGetProduct}
-                              // onDeleteProduct={onDeleteProduct}
-                              // handleDeleteModal={handleDeleteModal}
-                              // handleOpenEditModalWithValue={
-                              //   handleOpenEditModalWithValue
-                              // }
+                              index={index}
                             />
                           );
                         })}
@@ -693,16 +687,16 @@ function App() {
                 <div className="col-md-6 mb-1">
                   <h2>單一產品細節</h2>
                   {tempProduct ? (
-                    <ProductDetail
-                      title={tempProduct.title}
-                      imageUrl={tempProduct.imageUrl}
-                      setImgAlt={tempProduct.setImgAlt}
-                      description={tempProduct.description}
-                      content={tempProduct.content}
-                      origin_price={tempProduct.origin_price}
-                      price={tempProduct.price}
-                      imagesUrl={tempProduct.imagesUrl}
-                      category={tempProduct.category}
+                    <ProductDetail productData={tempProduct}
+                      // title={tempProduct.title}
+                      // imageUrl={tempProduct.imageUrl}
+                      // setImgAlt={tempProduct.setImgAlt}
+                      // description={tempProduct.description}
+                      // content={tempProduct.content}
+                      // origin_price={tempProduct.origin_price}
+                      // price={tempProduct.price}
+                      // imagesUrl={tempProduct.imagesUrl}
+                      // category={tempProduct.category}
                     />
                   ) : (
                     <p className="text-secondary">請選擇一個商品查看</p>
